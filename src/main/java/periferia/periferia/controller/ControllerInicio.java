@@ -4,19 +4,14 @@
  */
 package periferia.periferia.controller;
 
-import java.io.EOFException;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.http.converter.HttpMessageNotReadableException;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import periferia.periferia.domain.Persona;
-import periferia.periferia.domain.PersonaResponse;
 import periferia.periferia.domain.Request;
 import periferia.periferia.service.PersonaService;
 
@@ -30,11 +25,6 @@ public class ControllerInicio {
 
     @Autowired
     private PersonaService personaService;
-
-    @GetMapping("/hello")
-    public String hello() {
-        return "Hola SpringBoot";
-    }
 
     @GetMapping("/consultar")
     public ResponseEntity<Object> consultar(@RequestBody Request r) {

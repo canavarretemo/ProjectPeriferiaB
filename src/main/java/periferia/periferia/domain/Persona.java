@@ -16,8 +16,6 @@ public class Persona{
         this.documento = documento;
     }
 
-
-    
     private String primerNombre;
     
     private String segundoNombre;
